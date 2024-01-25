@@ -1,13 +1,9 @@
 body{
     height: 100vh;
-    font-family: cursive;
+    font-family: Arial;
 }
 
-h1{
-    text-align: center;
-}
-
-.box{
+.container{
     display: flex;
     gap: 10px;
     transition: all 0.3s ease;
@@ -18,67 +14,51 @@ h1{
     cursor: pointer;
 }
 
-.s-box{
-    padding: 5px;
+
+
+h1{
+    text-align: center;
 }
 
 
-.box:hover{
-    background-color: rgb(203, 233, 243);
-    cursor: pointer;
-}
-
-.addtask{
-    display: flex;
-    gap: 10px;
-}
-
-.addtask input, .addtask button, .btn{
+.task-container input, .task-container button{
     padding: 10px;
     width: 200px;
-    border: 1px solid grey;
+    border: 1px solid rgb(233, 160, 50);
     border-radius: 5px;
     font-size: 1rem;
 }
 
-.addtask input:focus{
-    border: 1px solid #0260CC;
-    outline: 2px solid #0260CC;
+
+
+.task-container input:focus{
+    border: 1px solid #659ee0;
+    outline: 2px solid #659ee0;
 }
 
 
-.addtask button, .btn{
+.task-container button{
     width: 100px;
-    background-color: #17A34A;
+    background-color: #08582597;
     cursor: pointer;
-    color: white;
-    border-color: #17A34A;
+    color: rgb(23, 5, 5);
+    border-color: #08582597;
     transition: all 0.3s ease;
 }
 
-.btn{
-    display: inline-block;
-    line-height: 40px;
-    height: 40px;
-    padding: 0 5px;
-    text-decoration: none;
-    text-align: center;
+.container:hover{
+    background-color: rgb(58, 158, 191);
+    cursor: pointer;
 }
 
-.abs-right{
-    position: absolute;
-    right: 0;
+.task-container{
+    display: flex;
+    gap: 10px;
 }
+
 
 .buttons{
     position: relative;
-}
-
-.j-btw{
-    display: flex;
-    width: 570px;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .buttons p{
@@ -86,9 +66,44 @@ h1{
     line-height: 40px;
 }
 
-.addtask button:hover, .btn:hover{
-    background-color: #0260CC;
+.task-container button:hover{
+    background-color: #6816ab;
+    color: aliceblue;
 }
+
+
+.list{
+    position: relative;
+}
+
+span{
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background: rgb(161, 111, 111);
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-trash{
+    color: rgb(149, 20, 20);
+    cursor: pointer;
+}
+
 
 .card input{
     padding: 10px;
@@ -103,40 +118,13 @@ h1{
     font-size: 20px;
 }
 
-.list{
-    position: relative;
-}
 
-span{
-    font-size: 18px;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 10px;
-    background: lightgray;
-    height: 25px;
-    width: 25px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fa-trash{
-    color: rgb(200, 33, 33);
-    cursor: pointer;
-}
-
-.box #icon{
+.container #icon{
    opacity: 0;
    transition: all 0.3s ease;
 }
 
-.box:hover  #icon{
+.container:hover  #icon{
     opacity: 1;
 }
 
@@ -144,13 +132,18 @@ span{
     flex-direction: column;
 }
 
-.addtask label{
+.task-container label{
     color: #17A34A;
     display: inline-block;
     margin-right: 10px;
     font-size: 20px;
     height: 20px;
-    width: 20px;
+    width: 100px;
+}
+
+.green{
+    color:#17A34A;
+    padding-left: 10px;
 }
 
 .right-btn{

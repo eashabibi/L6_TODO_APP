@@ -4,10 +4,10 @@
 /* eslint-disable quotes */
 
 const express = require("express");
-const csrf = require("tiny-csrf");
 const cookieparser = require("cookie-parser");
-const app = express();
+const csrf = require("tiny-csrf");
 const { Todo, User } = require("./models");
+const app = express();
 const path = require("path");
 
 const passport = require("passport");
@@ -25,8 +25,8 @@ app.use(cookieparser("secret string"));
 app.use(csrf("this_should_be_32_character_long", ["POST", "PUT", "DELETE"]));
 app.use(
   session({
-    secret: "my-super-secret-key-21728172615261562",
-    cookie: { maxAge: 3600000 },
+    secret: "my-super-secret-key-22358926379104827",
+    cookie: { maxAge: 24 * 60 * 60 * 1000 },
   }),
 );
 app.use(passport.initialize());
@@ -85,10 +85,6 @@ app.get("/", async (request, response) => {
   });
 });
 
-app.get("/signup", (request, response) => {
-  return response.render("signup", { csrfToken: request.csrfToken() });
-});
-
 app.post("/users", async (request, response) => {
   const firstName = request.body.firstName;
   const lastName = request.body.lastName;
@@ -96,21 +92,21 @@ app.post("/users", async (request, response) => {
   const password = request.body.password;
 
   if (firstName.length < 3) {
-    request.flash("error", "First name should be atleast 3 characters long");
+    request.flash("error", "First name length should be atleast 3");
   }
 
   if (lastName.length < 3) {
-    request.flash("error", "Last name should be atleast 3 characters long");
+    request.flash("error", "Last name length should be atleast 3");
   }
 
   // validate email
   const emailRegex = /\S+@\S+\.\S+/;
   if (!emailRegex.test(email)) {
-    request.flash("error", "Invalid email");
+    request.flash("error", "Not a valid email");
   }
 
   if (password.length < 8) {
-    request.flash("error", "Password should be atleast 8 characters long");
+    request.flash("error", "Password length should be atleast 8");
     return response.redirect("/signup");
   }
 
@@ -125,16 +121,20 @@ app.post("/users", async (request, response) => {
 
     request.login(user, (error) => {
       if (error) {
-        request.flash("error", "Error while logging in");
+        request.flash("error", "Some Error while logging in");
         return response.redirect("/login");
       }
       return response.redirect("/todos");
     });
   } catch (error) {
     console.log(error);
-    request.flash("error", "Email already exists or Some error occured");
+    request.flash("error", "Already a Existing user");
     return response.redirect("/signup");
   }
+});
+
+app.get("/signup", (request, response) => {
+  return response.render("signup", { csrfToken: request.csrfToken() });
 });
 
 app.get("/login", (request, response) => {
@@ -192,15 +192,15 @@ app.post(
     const dueDate = request.body.dueDate;
 
     if (title.length < 5) {
-      request.flash("error", "length of title should be greater than 5");
+      request.flash("error", "title length should be greater than 5");
     }
     if (dueDate.length < 1) {
-      request.flash("error", "Due date cannot be empty");
+      request.flash("error", "Empty due Date cant be accepted");
       return response.redirect("/todos");
     }
 
     try {
-      await Todo.addTodo({
+      await Todo.addTodoTask({
         title,
         dueDate,
         completed: false,
@@ -211,7 +211,7 @@ app.post(
     } catch (error) {
       console.log(error);
 
-      request.flash("error", "length of title should be greater than 5");
+      request.flash("error", "title length should be greater than 5");
 
       return response.redirect("/todos");
     }
@@ -225,7 +225,7 @@ app.put(
     const todo = await Todo.findByPk(request.params.id);
     const completed = request.body.completed;
     try {
-      const updatedTodo = await todo.setCompletionStatus(completed);
+      const updatedTodo = await todo.setCompletionStatusofTask(completed);
       return response.json(updatedTodo);
     } catch (error) {
       console.log(error);

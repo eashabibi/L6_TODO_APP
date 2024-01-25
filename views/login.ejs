@@ -9,23 +9,22 @@
 </head>
 <body>
     <%- include('header') %>
-    <div class="center">
+    <div class="centerdiv">
         <div>
-            <h2>Sign up as a new user</h2>
+            <h2>Already a Existing User</h2>
             <% if(messages && messages.error && messages.error.length > 0) { %>
                 <% for(var i=0; i<messages.error.length; i++){ %>
                     <li><%= messages.error[i] %></li>
                 <% } %>
             <% } %>
 
-            <form action="/session" method="post" class="addtask column">
+            <form action="/session" method="post" class="task-container column">
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <div><label for="email"><i class="fa-solid fa-envelope"></i></label><input type="email" name="email" placeholder="Email"></div>
-                <div><label for="password"><i class="fa-solid fa-lock"></i></label><input type="password" name="password" placeholder="Password"></div>
-                <button class="right-btn" type="submit">Sign In <i class="fa-solid fa-right-to-bracket"></i></button>
+                <div><label for="email">Email</label><input type="email" name="email" placeholder="Email"></div>
+                <div><label for="password">Password</label><input type="password" name="password" placeholder="Password"></div>
+                <button class="right-btn" type="submit">Sign In</button>
             </form>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/4d482375c9.js" crossorigin="anonymous"></script>
 </body>
 </html>

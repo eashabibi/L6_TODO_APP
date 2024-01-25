@@ -49,13 +49,11 @@
     </script>
 </head>
 <body>
-    <div class="center">
-        <div class="j-btw">
+    <div class="centerdiv">
             <%- include('header') %>
-            <a  class="btn" href="/signout">Sign Out <i class="fa-solid fa-right-to-bracket"></i></a>
-        </div>
+            <a  class="green" href="/signout">Sign Out</a>
     </div>
-    <div class="center">
+    <div class="centerdiv">
        <div>
         <% if(messages && messages.error && messages.error.length > 0) { %>
             <% for(var i=0; i<messages.error.length; i++){ %>
@@ -63,9 +61,9 @@
             <% } %>
         <% } %>
         <form action="/todos" method="post">
-            <div class="addtask">
+            <div class="task-container">
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <div><input type="text" name="title" placeholder="What's next?"></div>
+                <div><input type="text" name="title" placeholder="Type task here.."></div>
                 <div><input type="date" name="dueDate"></div>
                 <div><button type="submit">Add</button></div>
             </div>

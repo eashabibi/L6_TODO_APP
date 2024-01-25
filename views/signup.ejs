@@ -9,7 +9,7 @@
 </head>
 <body>
     <%- include('header') %>
-    <div class="center">
+    <div class="centerdiv">
         <div class="width-div">
             <h2>Sign up as a new user</h2>
 
@@ -18,16 +18,15 @@
                     <li><%= messages.error[i] %></li>
                 <% } %>
             <% } %>
-            <form action="/users" method="post" class="addtask column">
+            <form action="/users" method="post" class="task-container column">
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <div><label for="firstName"><i class="fa-solid fa-user"></i></label><input type="text" name="firstName" placeholder="First Name"></div>
-                <div><label for="lastName"><i class="fa-solid fa-user"></i></label><input type="text" name="lastName" placeholder="Last Name"></div>
-                <div><label for="email"><i class="fa-solid fa-envelope"></i></label><input type="email" name="email" placeholder="Email"></div>
-                <div><label for="password"><i class="fa-solid fa-lock"></i></label><input type="password" name="password" placeholder="Password"></div>
-                <button class="right-btn" type="submit">Sign Up <i class="fa-solid fa-right-to-bracket"></i></button>
+                <div><label for="firstName">Firstname</label><input type="text" name="firstName" placeholder="First Name"></div>
+                <div><label for="lastName">LastName</label><input type="text" name="lastName" placeholder="Last Name"></div>
+                <div><label for="email">Email</label><input type="email" name="email" placeholder="Email"></div>
+                <div><label for="password">Password</label><input type="password" name="password" placeholder="Password"></div>
+                <button class="right-btn" type="submit">Sign Up</button>
             </form>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/4d482375c9.js" crossorigin="anonymous"></script>
 </body>
 </html>

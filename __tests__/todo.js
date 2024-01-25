@@ -39,7 +39,7 @@ describe("Todo test suite", () => {
     await server.close();
   });
 
-  test("Sign Up", async () => {
+  test("Testing Sign Up", async () => {
     const res = await agent.get("/signup");
     const crsfToken = extractCsrfToken(res);
     const response = await agent.post("/users").send({
@@ -52,7 +52,7 @@ describe("Todo test suite", () => {
     expect(response.status).toBe(302);
   });
 
-  test("Signout", async () => {
+  test("Testing Signout", async () => {
     let res = await agent.get("/todos");
     expect(res.status).toBe(200);
     res = await agent.get("/signout");
@@ -61,7 +61,7 @@ describe("Todo test suite", () => {
     expect(res.status).toBe(302);
   });
 
-  test("creating a new todo", async () => {
+  test("Test to create a new todo", async () => {
     const agent = request.agent(server);
     await login(agent, "user.a@test.com", "12345678");
     const res = await agent.get("/todos");
@@ -75,7 +75,7 @@ describe("Todo test suite", () => {
     expect(response.status).toBe(302);
   });
 
-  test("Mark a todo as completed", async () => {
+  test("Test to Mark a todo as completed", async () => {
     const agent = request.agent(server);
     await login(agent, "user.a@test.com", "12345678");
     let res = await agent.get("/todos");
@@ -111,7 +111,7 @@ describe("Todo test suite", () => {
     expect(parsedMarkAsCompletedResponse.completed).toBe(true);
   });
 
-  test("Marks as incompleted", async () => {
+  test("Test to Marks as incompleted", async () => {
     const agent = request.agent(server);
     await login(agent, "user.a@test.com", "12345678");
     let res = await agent.get("/todos");
@@ -147,7 +147,7 @@ describe("Todo test suite", () => {
     expect(parsedMarkAsCompletedResponse.completed).toBe(false);
   });
 
-  test("Delete a todo", async () => {
+  test("Test to Delete a todo", async () => {
     const agent = request.agent(server);
     await login(agent, "user.a@test.com", "12345678");
     let res = await agent.get("/todos");
@@ -179,7 +179,7 @@ describe("Todo test suite", () => {
     expect(deleteResponse.status).toBe(200);
   });
 
-  test("Get all todos", async () => {
+  test("Test to Get all todos", async () => {
     const agent = request.agent(server);
     await login(agent, "user.a@test.com", "12345678");
     let res = await agent.get("/todos");

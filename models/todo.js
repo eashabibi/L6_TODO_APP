@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
-    static addTodo({ title, dueDate, userId }) {
+    static addTodoTask({ title, dueDate, userId }) {
       return this.create({
         title,
         dueDate,
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
-    setCompletionStatus(status) {
+    setCompletionStatusofTask(status) {
       return this.update({ completed: status });
     }
 
@@ -32,8 +32,16 @@ module.exports = (sequelize, DataTypes) => {
       return this.findAll();
     }
 
-    static async deleteById(id, userId) {
-      return this.destroy({ where: { id, userId } });
+    static dueToday(userId) {
+      return this.findAll({
+        where: {
+          dueDate: {
+            [Op.eq]: new Date(),
+          },
+          completed: false,
+          userId,
+        },
+      });
     }
 
     static overDue(userId) {
@@ -48,16 +56,8 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
-    static dueToday(userId) {
-      return this.findAll({
-        where: {
-          dueDate: {
-            [Op.eq]: new Date(),
-          },
-          completed: false,
-          userId,
-        },
-      });
+    static async deleteById(id, userId) {
+      return this.destroy({ where: { id, userId } });
     }
 
     static dueLater(userId) {
@@ -91,7 +91,7 @@ module.exports = (sequelize, DataTypes) => {
           len: 5,
         },
       },
-      dueDate: DataTypes.DATEONLY,
+      dueDate: { type: DataTypes.DATEONLY },
       completed: { type: DataTypes.BOOLEAN, defaultValue: false },
     },
     {

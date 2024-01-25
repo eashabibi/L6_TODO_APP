@@ -1,0 +1,173 @@
+body{
+    height: 100vh;
+    font-family: cursive;
+}
+
+h1{
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.s-box{
+    padding: 5px;
+}
+
+
+.box:hover{
+    background-color: rgb(203, 233, 243);
+    cursor: pointer;
+}
+
+.addtask{
+    display: flex;
+    gap: 10px;
+}
+
+.addtask input, .addtask button, .btn{
+    padding: 10px;
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.addtask input:focus{
+    border: 1px solid #0260CC;
+    outline: 2px solid #0260CC;
+}
+
+
+.addtask button, .btn{
+    width: 100px;
+    background-color: #17A34A;
+    cursor: pointer;
+    color: white;
+    border-color: #17A34A;
+    transition: all 0.3s ease;
+}
+
+.btn{
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.abs-right{
+    position: absolute;
+    right: 0;
+}
+
+.buttons{
+    position: relative;
+}
+
+.j-btw{
+    display: flex;
+    width: 570px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons p{
+    margin: 20px 0;
+    line-height: 40px;
+}
+
+.addtask button:hover, .btn:hover{
+    background-color: #0260CC;
+}
+
+.card input{
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.card{
+    font-size: 20px;
+}
+
+.list{
+    position: relative;
+}
+
+span{
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: lightgray;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-trash{
+    color: rgb(200, 33, 33);
+    cursor: pointer;
+}
+
+.box #icon{
+   opacity: 0;
+   transition: all 0.3s ease;
+}
+
+.box:hover  #icon{
+    opacity: 1;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.addtask label{
+    color: #17A34A;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+.right-btn{
+    margin: 10px 0;
+    align-self: center;
+}
+
+li{
+    list-style: none;
+    color: red;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.width-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <div className="nav">
-      <div className="header">Sports Shedular</div>
+      <div className="header">Sports you Shedular</div>
       <div className="tags">
         <ul>
           {isLogged ? (

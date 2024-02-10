@@ -13,10 +13,10 @@ const SessionCard = ({ session }) => {
         <b>Date</b> <p>{session.date}</p>
       </div>
       <div className="flex">
-        <b>Start Time: </b> <p>{session.start_time}</p>
+        <b>Start Time </b> <p>{session.start_time}</p>
       </div>
       <div className="flex">
-        <b>End Time: </b> <p>{session.end_time}</p>
+        <b>End Time</b> <p>{session.end_time}</p>
       </div>
       <div className="flex">
         <b>Venue</b> <p>{session.venue}</p>

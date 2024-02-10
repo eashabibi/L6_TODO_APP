@@ -35,7 +35,7 @@ const SportCard = ({ sportdata, isAdmin, csrfToken, getSports }) => {
       {isAdmin ? <span onClick={handleDelete}>X</span> : null}
       <h2>{sportdata.s_name}</h2>
       <button className="lightbtn sbtn" onClick={handleSession}>
-        Create Session:
+        Create Session
       </button>
     </div>
   );

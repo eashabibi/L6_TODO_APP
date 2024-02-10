@@ -83,7 +83,7 @@ const Login = () => {
   return (
     <div>
       <form onSubmit={handleSubmit} className="form">
-        <p>Welcome back to Sport Shedular..!</p>
+        <p>Welcome to as back to Sport Shedular..!</p>
         <input type="email" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Password" />
         <button className="darkbtn" type="submit">

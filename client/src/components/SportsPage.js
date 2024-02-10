@@ -147,7 +147,7 @@ const SportsPage = () => {
             <input type="text" name="venue" placeholder="Venue" />
             <div className="input-width">
               <button className="darkbtn fitbtn" type="submit">
-                Create Session now:
+                Create Session 
               </button>
               <button
                 className="lightbtn fitbtn"

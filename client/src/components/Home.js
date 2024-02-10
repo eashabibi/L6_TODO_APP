@@ -1,13 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import BasketBall from "../images/basketball.svg";
+
+import backgroundImg from "../images/backgroungImg.png";
 
 const Home = () => {
   return (
     <div className="flex-c">
       <div>
-        <h1 className="title">Sports Shedular</h1>
-        <img src={BasketBall} alt="Basketball" />
+        <h1 className="title">Schedule your sports </h1>
+        <img src={backgroundImg} alt="backgroundImg" />
       </div>
       <div>
         <Outlet />

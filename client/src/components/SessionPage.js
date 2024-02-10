@@ -291,16 +291,16 @@ const SessionPage = () => {
           <h1>{sportName + " / " + session.sess_name}</h1>
           <div className="flex">
             <p>
-              <b>Date</b> {session.date}
+              <b>Date: </b> {session.date}
             </p>
             <p>
-              <b>Start Time</b> {session.start_time}
+              <b>Start Time: </b> {session.start_time}
             </p>
             <p>
-              <b>End Time</b> {session.end_time}
+              <b>End Time: </b> {session.end_time}
             </p>
             <p>
-              <b>Venue</b> {session.venue}
+              <b>Venue: </b> {session.venue}
             </p>
           </div>
         </div>

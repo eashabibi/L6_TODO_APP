@@ -1,253 +1,736 @@
-body{
-  height: 100vh;
-  width: 100%;
-}
-.flex-c{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 84.5vh;
-}
-
-.form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgb(43, 43, 59);
-  padding: 25px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-}
-
-input{
-  height: 40px;
-  width: 300px;
-  display: block;
-  margin: 5px 0;
-  border-radius: 5px;
-  border-color: rgb(43, 43, 59);
-  padding: 0px 15px;
-}
-
-.darkbtn{
-  height: 40px;
-  width: 100px;
-  border-radius: 5px;
-  background-color: rgb(43, 43, 59);
-  border-color: white;
-  color: white;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.darkbtn:hover{
-  background-color: white;
-  color: rgb(43, 43, 59);
-}
-
-.lightbtn{
-  height: 40px;
-  width: 100px;
-  border-radius: 5px;
-  background-color: white;
-  color: rgb(43, 43, 59);
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.lightbtn:hover{
-  background-color: rgb(43, 43, 59);
-  color: white;
-  border-color: white;
-}
-
-.line{
-  width: 100%;
-  background-color: rgb(43, 43, 59);
-}
-
-.title{
-  font-size: 60px;
-  color: rgb(43, 43, 59);
-}
-
-.flex-c img{
-  height: 600px;
-  position: relative;
-  left: 70px;
-}
-
-.nav{
-  height: 10vh;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  background-color: white;
-}
-
-.nav .header{
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.footer{
-  display: flex;
-  justify-content: space-between;
-  padding: 0 100px;
-  margin-top: 20px;
-  align-items: center;
-  background-color: rgb(43, 43, 59);
-  color: white;
-}
-
-.footer .header{
-  font-size: 20px;
-}
-
-
-.tags ul{
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.tags ul li a{
-  margin: 0 20px;
-  background-color: rgb(43, 43, 59);;
-  transition: all 0.5s;
-  height: 40px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 100px;
-}
-
-.tags ul li a:hover, .tags ul li a.active{
-  background-color: white;
-  color: rgb(43, 43, 59);
-  border-radius: 5px;
-  border: 1px solid rgb(43, 43, 59);
-}
-
-.tags ul li a{
-  text-decoration: none;
-  color: white;
-}
-
-.profile{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgb(43, 43, 59);
-  color: white;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  font-weight: bold;
-}
-.flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 50px;
-}
-
-.sport-card{
-  height: 200px;
-  width: 180px;
-  background-color: white;
-  border: 2px solid rgb(43, 43, 59);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s;
-  position: relative;
-  margin: 10px;
-}
-
-.sport-card:hover{
-  transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.6)  ;
-}
-
-.sport-card span{
-  position: absolute;
-  top: 5px;
-  right: 8px;
-  border-radius: 50%;
-  background-color: rgb(43, 43, 59);
-  height: 20px;
-  width: 20px;
-  color: white;
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.grid{
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 20px;
+.d-pad {
   padding: 20px;
 }
 
-.sbtn{
-  position: absolute;
-  bottom: 15px;
-  width: fit-content;
-  padding: 0 15px;
-}
-
-.d-pad{
-  padding: 0 100px;
-}
-
-.sbtw{
-  justify-content: space-between;
-}
-
-.fitbtn{
-  width: fit-content;
-  padding: 0 15px;
-}
-
-.input-width{
-  width: 300px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.col{
-  flex-direction: column;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.col1{
-  flex-direction: column;
-}
-
-.card2{
-  height: 350px;
-  width: 300px;
-  flex-direction: column;
-}
-
-.flex2{
+.flex {
   display: flex;
   align-items: center;
+}
+.flex p{
+  border: 1px solid #3498db;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.sbtw {
+  justify-content: space-between;
+}
+
+.darkbtn {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.lightbtn {
+  background-color: #fff;
+  color: #333;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Customize as needed */
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+/* Footer.js  */
+
+
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Home.js  */
+
+
+
+.flex-c {
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+
+/* Login.js  */
+
+
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button.lightbtn {
+  background-color: #fff;
+  color: #333;
+}
+
+.line {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+/* Adjust styling as needed */
+
+/* Nav.js  */
+
+.nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tags ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.tags ul li:last-child {
+  margin-right: 0;
+}
+
+.tags ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+
+/* Sessioncard.js  */
+
+
+.sport-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.sport-card h2 {
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.flex b {
+  margin-right: 10px;
+}
+
+.darkbtn {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* SessionPage.js  */
+
+.d-pad {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex p {
+  margin-right: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.darkbtn {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lightbtn {
+  background-color: #fff;
+  color: #333;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-width {
+  width: 100%;
+}
+
+.fitbtn {
+  margin-left: 10px;
+}
+
+.flex2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex2 p {
+  margin-right: 10px;
+}
+
+/* Adjust styling as needed */
+
+
+/* SignUp.js  */
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button.lightbtn {
+  background-color: #fff;
+  color: #333;
+}
+
+.line {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+/* Adjust styling as needed */
+
+/* SportCard.js  */
+
+.sport-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.sport-card h2 {
+  margin-bottom: 10px;
+}
+
+.sport-card span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
+  color: red;
+  cursor: pointer;
+}
+
+.lightbtn {
+  background-color: #fff;
+  color: #333;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sbtn {
+  margin-left: 10px;
+}
+
+/* Adjust styling as needed */
+
+/* SportPage.js  */
+
+.d-pad {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.darkbtn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lightbtn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fitbtn {
+  width: 150px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.col {
+  grid-template-columns: 1fr;
+}
+
+.card2 {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card2 h2 {
+  margin-bottom: 10px;
+}
+
+.flex p {
+  margin: 5px 0;
+}
+
+/* Adjust styling as needed */
+
+
+/* TeamCard.js  */
+.sport-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sport-card h2 {
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.darkbtn {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Adjust styling as needed */
+
+
+
+/* General Styles */
+
+.d-pad {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.sbtw {
+  justify-content: space-between;
+}
+
+.darkbtn {
+  background-color: #3498db; /* Dark blue color */
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer; /* Added cursor pointer */
+}
+
+.lightbtn {
+  background-color: #fff;
+  color: #3498db; /* Dark blue color */
+  padding: 8px 16px;
+  border: 1px solid #3498db; /* Dark blue color */
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer; /* Added cursor pointer */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  background-color: #ecf0f1; /* Light blue-gray color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+/* Footer Styles */
+
+.footer {
+  background-color: #3498db; /* Dark blue color */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Header Styles */
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Home Styles */
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Login Styles */
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form input{
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input{
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #3498db; /* Dark blue color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button.lightbtn {
+  background-color: #fff;
+  color: #3498db; /* Dark blue color */
+}
+
+.line {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+/* Nav Styles */
+
+.nav {
+  background-color: #3498db; /* Dark blue color */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tags ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.tags ul li:last-child {
+  margin-right: 0;
+}
+
+.tags ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* SessionCard Styles */
+
+.sport-card {
+  background-color: #ecf0f1; /* Light blue-gray color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.sport-card h2 {
+  margin-bottom: 10px;
+}
+
+.sport-card .flex {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.sport-card .flex b {
+  margin-right: 10px;
+}
+
+/* SessionPage Styles */
+
+.flex p {
+  margin-right: 20px;
+}
+
+/* SignUp Styles */
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* SportPage Styles */
+
+.flex {
+  margin-bottom: 20px; /* Removed justify-content and align-items */
+}
+
+/* TeamCard Styles */
+
+.sport-card {
+  background-color: #ecf0f1; /* Light blue-gray color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sport-card h2 {
+  margin-bottom: 10px;
+}
+
+.sport-card .flex {
+  display: flex;
+  margin-bottom: 5px;
 }

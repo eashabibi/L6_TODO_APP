@@ -91,7 +91,7 @@ const SignUp = () => {
         </button>
 
         <hr className="line" />
-        <p>Already have your an account</p>
+        <p>Already have  an account</p>
         <Link to="/">
           <button className="lightbtn">Login</button>
         </Link>

@@ -367,7 +367,7 @@ const SessionPage = () => {
                 Join with team
               </button>
               <button className="lightbtn fitbtn" onClick={handleIndvidual}>
-                Join Indvidually
+                Join as Indvidually
               </button>
             </div>
           </div>

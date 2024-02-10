@@ -20,10 +20,10 @@ const TeamCard = ({
     <div className="sport-card col1">
       <h2>{team.t_name}</h2>
       <div className="flex">
-        <b>Team Size:</b> <p>{team.t_size}</p>
+        <b>Team Size</b> <p>{team.t_size}</p>
       </div>
       <button className="darkbtn" id={`team-id`+team.id} onClick={handleTeamDetails}>
-        View your Team:
+        View Team
       </button>
     </div>
   );

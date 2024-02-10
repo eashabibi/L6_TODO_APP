@@ -397,10 +397,10 @@ const SessionPage = () => {
           ))}
           <div className="input-width">
             <button className="darkbtn" type="submit">
-              Join:
+              Join
             </button>
             <button className="lightbtn" type="button" onClick={handleJoinForm}>
-              Cancel:
+              Cancel
             </button>
           </div>
         </form>

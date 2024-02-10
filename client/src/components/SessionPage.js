@@ -364,7 +364,7 @@ const SessionPage = () => {
             </div>
             <div className="flex">
               <button className="darkbtn fitbtn" onClick={handleJoinForm}>
-                Join along with team
+                Join with team
               </button>
               <button className="lightbtn fitbtn" onClick={handleIndvidual}>
                 Join Indvidually
